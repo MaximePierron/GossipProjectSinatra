@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Editer un potin</title>
+    </head>
+    <body>
+        <h1>Edite un potin !</h1>
+        <p>Modifie ce que tu veux via le formulaire ci-dessous</p>
+        <form action='/gossips/<%= params["id"] %>/edit/' method='POST'>
+        <% gossip.each do |gossip| %>
+            Saisis ici ton nom :  <input type='text' name='new_gossip_author' value=<%= gossip.author %> ><br/>
+            Balance ton potin : <input type='text' name='new_gossip_content' value=<%= gossip.content %> ><br/>
+            <input type='submit'/>
+        </form>
+        <% end %>
+        
+    </body>
+</html>

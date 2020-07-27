@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Potin</title>
+    </head>
+    <body>
+        <h1>Voici la page du potin n°<%= params["id"] %></h1>
+    </body>
+    <% gossip.each do |gossip| %>
+        <p>
+          <%= gossip.author %></br>
+          <%= gossip.content%>
+        </p>
+    <% end %>
+    <a href="/gossips/">Revenir à l'accueil</a>
+    <a href="/gossips/<%= params["id"] %>/edit/">Editer</a>
+
+</html>
